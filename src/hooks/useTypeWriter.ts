@@ -61,6 +61,7 @@ export const useTypeWriter = ({
     const fullWord = words[index];
 
     if (!isDelete.current) {
+      //@ts-ignore
       dispatch({ type: 'TYPE', payload: fullWord, speed: typeSpeed });
       isType.current = true;
 
@@ -74,6 +75,7 @@ export const useTypeWriter = ({
           isDelete.current = true;
         }, delaySpeed);
 
+        //@ts-ignore
         if (loop > 0) {
           loops.current += 1;
           if (loops.current / words.length === loop) {
@@ -83,6 +85,7 @@ export const useTypeWriter = ({
         }
       }
     } else {
+      //@ts-ignore
       dispatch({ type: 'DELETE', payload: fullWord, speed: deleteSpeed });
       if (text === '') {
         isDelete.current = false;

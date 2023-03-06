@@ -58,6 +58,8 @@ export const TypeWriter = ({
       );
     } else if (showCursor && !blinkingCursor) {
       return <Text style={{ color: cursorColor }}>{`${cursorElement}`}</Text>;
+    } else {
+      return null;
     }
   };
 
