@@ -5,6 +5,9 @@ import {
   ViewStyle,
 } from 'react-native';
 
+export * from './components/TypeWriter';
+export * from './hooks/useTypeWriter';
+
 const LINKING_ERROR =
   `The package 'react-native-typewritter' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +

@@ -1,12 +1,16 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import { TypewritterView } from 'react-native-typewritter';
+import { TypewritterView, TypeWriter } from 'react-native-typewritter';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <TypewritterView color="#32a852" style={styles.box} />
+      <TypewritterView color="#333333" style={styles.box} />
+      <TypeWriter
+        loop={false}
+        words={['this is beautiful', 'awesome', 'coder']}
+      />
     </View>
   );
 }
